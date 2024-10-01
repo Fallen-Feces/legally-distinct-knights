@@ -1,0 +1,3 @@
+The game takes place on an ocean planet. Most islands are small; there's a few larger ones with settlements. However, virtually all humanoid life is centred around the ocean.
+
+One day, mysterious towers started rising out of the water. Their rise gave way to tsunamis, causing massive damage to communities built close to the water. People started exploring the towers in search of treasure and scavenging became a common lifestyle.
