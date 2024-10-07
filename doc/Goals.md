@@ -1,3 +1,8 @@
+---
+tags:
+  - Design
+  - Tech
+---
 There's many goals of the game. Through these various goals, the game ultimately becomes a platform.
 
 # Machine accessibility
