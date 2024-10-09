@@ -1,6 +1,10 @@
 using Godot;
 using System;
 using System.Linq;
+using System.Numerics;
+using Plane = Godot.Plane;
+using Vector2 = Godot.Vector2;
+using Vector3 = Godot.Vector3;
 
 public partial class Player : CharacterBody3D
 {
@@ -52,12 +56,12 @@ public partial class Player : CharacterBody3D
 		// Moving the character
 		Velocity = _targetVelocity;
 		MoveAndSlide();
-		LookAtCamera();
+		//LookAtCursorRayCast();
+		LookAtCursorAngle();
 	}
 
-	public void LookAtCamera()
+	public void LookAtCursorRayCast()
 	{
-		var spaceState = GetWorld3D().DirectSpaceState;
 		Plane planeState = new Plane(Vector3.Up, Position.Y);
 		var cam = GetNode<Camera3D>("../PlayerCamera3D");
 		_mousePos2D = GetViewport().GetMousePosition();
@@ -73,5 +77,22 @@ public partial class Player : CharacterBody3D
 		}
 
 		LookAt(_mousePos3D, Vector3.Up, false);
+	}
+
+	private Vector2 _playerPos;
+	private float _mouseAngle;
+	public void LookAtCursorAngle()
+	{
+		Plane planeState = new Plane(Vector3.Up, Position.Y);
+		//_mousePos2D = GetViewport().GetMousePosition();
+		var cam = GetNode<Camera3D>("../PlayerCamera3D");
+		_playerPos = cam.UnprojectPosition(Position);
+		_mousePos2D = GetViewport().GetMousePosition();
+
+		_mouseAngle = _playerPos.AngleToPoint(_mousePos2D);
+
+		_mousePos3D = Rotation;
+		_mousePos3D.Y = _mouseAngle;
+		Rotation = _mousePos3D;
 	}
 }

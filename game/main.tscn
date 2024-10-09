@@ -37,8 +37,6 @@ shadow_enabled = true
 Speed = 40
 FallAcceleration = 3000
 
-[node name="Marker3D" type="Marker3D" parent="Player"]
-
 [node name="PlayerCamera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 13.435, 13.435)
 script = ExtResource("2_jto8q")
