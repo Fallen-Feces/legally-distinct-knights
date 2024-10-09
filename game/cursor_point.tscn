@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjieyobb8t7m2"]
+
+[ext_resource type="Script" path="res://CursorPoint.cs" id="1_2i4dl"]
+
+[node name="CursorPoint" type="StaticBody3D"]
+script = ExtResource("1_2i4dl")

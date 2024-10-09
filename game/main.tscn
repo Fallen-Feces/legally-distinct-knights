@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://djx5nhnn1t8mo"]
+
+[ext_resource type="PackedScene" uid="uid://c46mikjigjyoe" path="res://player.tscn" id="1_84ne4"]
+[ext_resource type="Script" path="res://PlayerCamera3d.cs" id="2_jto8q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eso1d"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sotsf"]
+size = Vector3(60, 2, 60)
+
+[node name="Main" type="Node"]
+
+[node name="Ground" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_eso1d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_sotsf")
+
+[node name="Ground2" type="StaticBody3D" parent="."]
+transform = Transform3D(0.920505, -0.390731, 0, 0.390731, 0.920505, 0, 0, 0, 1, 14, -2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground2"]
+shape = SubResource("BoxShape3D_eso1d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground2"]
+mesh = SubResource("BoxMesh_sotsf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_84ne4")]
+Speed = 40
+FallAcceleration = 3000
+
+[node name="Marker3D" type="Marker3D" parent="Player"]
+
+[node name="PlayerCamera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 13.435, 13.435)
+script = ExtResource("2_jto8q")
