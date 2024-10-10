@@ -1,0 +1,1 @@
+**Aliens** are the family of extraterrestrial [[Creature|creatures]] primarily (but not exclusively) originating from the [[Moon]]. Their humanoid [[race]] is the [[lunarian]] race.
