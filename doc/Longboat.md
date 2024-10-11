@@ -1,0 +1,1 @@
+A **longboat** is a vessel used for space travel. It was invented by [[lunarian]] [[Ascendant|ascendants]] approximately 110 years after arriving on the moon. In contrast to [[Tower|towers]], they carry very small amounts of passengers and cargo. However, they are far cheaper to produce and operate. As such, lunarians do not produce towers for space travel.

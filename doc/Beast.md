@@ -1,0 +1,1 @@
+**Beasts** are the animals of the world. It is a [[creature]] family. Their humanoid [[race]] is the [[therian|therians]], who come in many shapes and sizes.
